@@ -1,0 +1,68 @@
+@import "../../styles/varriables.scss";
+
+.converter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: $color-background;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .conversion-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    max-width: 100%;
+    color: $color-text;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 2px solid $color-primary;
+    padding-bottom: 10px;
+    overflow: scroll;
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .input-container,
+  .select-container {
+    flex: 1;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: $color-primary;
+      outline: none;
+    }
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    font-size: 16px;
+    background: #fff;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: $color-primary;
+      outline: none;
+    }
+  }
+}
+
+

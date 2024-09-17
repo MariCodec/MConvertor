@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+# MConvertor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MConvertor is a simple web application for currency conversion. It allows users to convert amounts from one currency to another using up-to-date exchange rates.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can see the [demo version of the site](https://maricodec.github.io/MConvertor/).
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Responsive design - optimized for both desktop and mobile devices
+- Real-time currency conversion
+- Support for multiple currencies
+- Display of results in a user-friendly format
+- Dynamic update of exchange rates
+## Technologies
 
-- Configure the top-level `parserOptions` property like this:
+- **React** - for building the user interface
+- **Vite** - for fast build and development
+- **Sass** - for styling
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
